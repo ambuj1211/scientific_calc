@@ -1,0 +1,18 @@
+input[type="date"],input[type = "number"]{
+    background-color: 76, 76, 226, 0.822;  /* Adjust background color */
+    color: #ffffff;                /* Adjust text color */
+    border: 1px solid #ccc;     /* Adjust border color */
+    border-radius: 5px;         /* Add rounded corners */
+    padding: 10px;              /* Add padding */
+    font-size: 16px;            /* Adjust font size */
+    width: 200px;
+    height: 40px;
+    margin: 27px;
+    font-size: 20px;
+  }
+  
+  /* Styling for focused state */
+  input[type="date"]:focus ,input[type="number"] {
+    outline: none;
+    box-shadow: 0 0 5px #007bff;  /* Add a blue shadow */
+  }

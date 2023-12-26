@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(39, 39, 129);
+}
+
+body {
+    background-color: rgb(39, 39, 129);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(18, 18, 62);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(18, 18, 62);
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+    background-color: rgb(18, 18, 62);
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(18, 18, 62);
+    cursor: pointer;
+}
+nav ul li a:hover{
+    color: rgb(153, 153, 226);
+    font-size: 1.02rem;
+}
+
+

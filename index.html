@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="converter.css">
+    <link rel="stylesheet" href="age.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left" id = "change">
+                Scientific Calculator
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html" onclick="showBlockMain()">Main </a></li>
+                    <li><a onclick="showBlocktemp()">Temp Calc </a></li>
+                    <li><a onclick="showBlockage()">Age Calc </a></li>
+                    <li><a onclick="showBlocklength()">Length Calc </a></li>
+                    <li><a onclick="showBlockbmi()">BMI Calc </a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- main calculator -->
+    <div id="calc">
+    <div class="calculator">
+        <input type="text" id="result" readonly>
+        <div class="buttons">
+            <button onclick="clearResult()">C</button>
+            <button onclick="deleteLast()">DEL</button>
+            <button onclick="appendSymbol('/')">/</button>
+            <button onclick="appendSymbol('*')">*</button>
+            <button onclick="appendSymbol('7')">7</button>
+            <button onclick="appendSymbol('8')">8</button>
+            <button onclick="appendSymbol('9')">9</button>
+            <button onclick="appendSymbol('-')">-</button>
+            <button onclick="appendSymbol('4')">4</button>
+            <button onclick="appendSymbol('5')">5</button>
+            <button onclick="appendSymbol('6')">6</button>
+            <button onclick="appendSymbol('+')">+</button>
+            <button onclick="appendSymbol('1')">1</button>
+            <button onclick="appendSymbol('2')">2</button>
+            <button onclick="appendSymbol('3')">3</button>
+            <button onclick="calculateResult()">=</button>
+            <button onclick="appendSymbol('0')">0</button>
+            <button onclick="appendSymbol('.')">.</button>
+            <button onclick="calculateLog()">log</button>
+            <button onclick="calculatePower()">calcPower</button>
+            <button onclick="calculateSin()">sin</button>
+            <button onclick="calculateCos()">cos</button>
+            <button onclick="calculateTan()">tan</button>
+            <button onclick="appendSymbol('^')">x<sup>y</sup></button>
+        </div>
+    </div>
+
+    <div class="calculator" style = "padding: 20px;">
+    <p>
+            <ul>
+                <li>calcPower calculate power of two number. It doesnot work with multiple expression</li>
+                <li>Example: 2^5 is able to calculate but 2+5^2  this expression is not able to calculate </li>
+            </ul>
+        </p>
+    </div>
+    </div>
+    <!-- temperature convertor -->
+    <div id="tempcalc" style="display: none;" class="box">
+
+        <div  class="converter">
+            <h1>Temperature Converter</h1>
+            <div class="design" id="myForm">
+              <input
+                class="input"
+                type="number"
+                id="temp"
+                placeholder="Enter temperature"
+              />
+              <select id="unit1">
+                <option value="celsius" selected>Celsius</option>
+    
+                <option value="fahrenheit">Fahrenheit</option>
+    
+                <option value="kelvin">Kelvin</option>
+              </select>
+    
+              <span>to</span>
+    
+              <select id="unit2">
+                <option value="celsius">Celsius</option>
+    
+                <option value="fahrenheit" selected>Fahrenheit</option>
+    
+                <option value="kelvin">Kelvin</option>
+              </select>
+            </div>
+    
+            <button onclick="convert()" class="button">Convert</button>
+            <div id="xyz" class="result" title="Result">
+              <p id="res"></p>
+            </div>
+        </div>
+    </div>
+    <!-- age calculator -->
+    <div id="agecalc" style="display: none;" class="box">
+        <div class="converter">
+            <h1>Age Calculator</h1>
+            <label for="birthdate"><span>Enter your birthdate:</span></label>
+            <input type="date" id="birthdate"/>
+            <button onclick="calculateAge()">Calculate Age</button>
+            <div id="agexyz" class="result" title="Result">
+                <p id="ageres"></p>
+              </div>
+        </div>
+    </div>
+
+    <!-- Lenght converter -->
+    <div id="lencalc" style="display: none;" class="box">
+        <div  class="converter">
+            <h1>Length Converter</h1>
+            <div class="design">
+              <input
+                class="input"
+                type="number"
+                id="value"
+                placeholder="Enter Value"
+              />
+              <select id="fromUnit">
+                <option value="cm" selected>cm</option>
+                <option value="m">m</option>
+                <option value="inch">inch</option>
+                <option value="feet">feet</option>
+              </select>
+              <span>to</span>
+              <select id="toUnit">
+                <option value="cm">cm</option>
+                <option value="m" selected>m</option>
+                <option value="inch">inch</option>
+                <option value="feet">feet</option>
+              </select>
+            </div>
+            <button onclick="convertLength()" class="button">Convert</button>
+            <div id="Lxyz" class="result" title="Result">
+              <p id="Lres"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bmi calculator -->
+    <div id = "bmicalc" style="display: block;" class="box">
+        <div class="converter" >
+            <h1>BMI Calculator</h1>
+            <label for="weight"><span>Weight (kg):</span></label>
+            <input type="number" id="weight" name="weight" step="0.01" required>
+            <!-- <input type="number" id="weight" name="weight" step="0.01" required> -->
+            <label for="height"><span>Height (cm):</span></label>
+            <input type="number" id="height" name="height" step="0.01" required>
+            <button onclick="convertBMI()" class="button">Calculate BMI</button>
+            <div id="BMIxyz" class="result" title="Result">
+              <p id="BMIres"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="utility.js"></script>
+    <script src="converter.js"></script>
+    <script src="convert.js"></script>
+    <script src="calculate.js"></script>
+    <script src="bmi.js"></script>
+</body>
+</html>
