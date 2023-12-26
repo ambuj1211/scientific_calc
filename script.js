@@ -63,3 +63,6 @@ function calculateTan() {
     var angle = Math.PI/180*parseFloat(result.value);
     result.value = Math.tan(angle);
 }
+document.addEventListener("contextmenu", (event) => {
+           event.preventDefault();
+        });
