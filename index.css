@@ -39,4 +39,8 @@ nav ul li a:hover{
     font-size: 1.02rem;
 }
 
-
+.bottom-paragraph{
+    position: absolute;
+  bottom: 0;
+  width: 100%;
+}
